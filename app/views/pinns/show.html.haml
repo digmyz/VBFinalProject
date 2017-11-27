@@ -1,0 +1,6 @@
+%h1= @pinn.title
+%p= @pinn.description
+
+= link_to "Back", root_path
+= link_to "Edit", edit_pinn_path
+= link_to "Delete", pinn_path, method: :delete, data: { confirm: "Are you sure?" } 
