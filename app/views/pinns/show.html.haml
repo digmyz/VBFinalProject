@@ -1,5 +1,6 @@
 %h1= @pinn.title
 %p= @pinn.description
+%p= @pinn.user ? @pinn.user.email : "No User Assigned"
 
 = link_to "Back", root_path
 = link_to "Edit", edit_pinn_path
