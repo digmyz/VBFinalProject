@@ -1,6 +1,12 @@
+= image_tag @pinn.image.url(:medium)
 %h1= @pinn.title
 %p= @pinn.description
-%p= @pinn.user ? @pinn.user.email : "No User Assigned"
+%p
+Submitted by
+= @pinn.user.email
+
+%br/
+//%p= @pinn.user ? @pinn.user.email : "No User Assigned"
 
 = link_to "Back", root_path
 = link_to "Edit", edit_pinn_path
