@@ -8,15 +8,16 @@
         %p.description= @pinn.description
         %p
         Submitted by
-        = @pinn.user.email
+        = @pinn.user && @pinn.user.email
       .panel-footer
         .row
           .col-md-6
             %p.user
             Submitted by
-            = @pinn.user.email  
+            = @pinn.user && @pinn.user.email  
           .col-md-6
             .btn-group.pull-right
+              = link_to "More Info", "https://www.google.com", class: "btn btn-default" 
               = link_to "Edit", edit_pinn_path, class: "btn btn-default"
               = link_to "Delete", pinn_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
