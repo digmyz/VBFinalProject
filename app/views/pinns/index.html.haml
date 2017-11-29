@@ -1,3 +1,6 @@
-- @pinns.each do |pinn|
-  = link_to (image_tag pinn.image.url(:medium)), pinn
-  %h2= link_to pinn.title, pinn
+#pinns.transitions-enabled
+  - @pinns.each do |pinn|
+    .box.panel.panel-default
+      = link_to (image_tag pinn.image.url), pinn
+      .panel-body
+        %h2= link_to pinn.title, pinn

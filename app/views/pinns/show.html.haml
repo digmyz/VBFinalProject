@@ -1,13 +1,23 @@
-= image_tag @pinn.image.url(:medium)
-%h1= @pinn.title
-%p= @pinn.description
-%p
-Submitted by
-= @pinn.user.email
+#pinn_show.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-heading.pinn_image
+        = image_tag @pinn.image.url
+      .panel-body
+        %h1=@pinn.title
+        %p.description= @pinn.description
+        %p
+        Submitted by
+        = @pinn.user.email
+      .panel-footer
+        .row
+          .col-md-6
+            %p.user
+            Submitted by
+            = @pinn.user.email  
+          .col-md-6
+            .btn-group.pull-right
+              = link_to "Edit", edit_pinn_path, class: "btn btn-default"
+              = link_to "Delete", pinn_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
-%br/
-//%p= @pinn.user ? @pinn.user.email : "No User Assigned"
 
-= link_to "Back", root_path
-= link_to "Edit", edit_pinn_path
-= link_to "Delete", pinn_path, method: :delete, data: { confirm: "Are you sure?" } 
