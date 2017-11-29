@@ -19,8 +19,8 @@
 @import "bootstrap";
 
 body {
-  background-image: url('/assets/bcimage2.jpeg');
-  background-size: cover;
+  background-image: url('/assets/bcimage1.jpeg');
+  background-size: 200px, 200px;
 /*perspective-origin: //*/
 }
 
@@ -46,7 +46,7 @@ nav {
   width: 100%;
   .box {
     margin: 10px;
-    width: 350px;
+    width: 300px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
     border-radius: 7px;
     text-align: center;
@@ -63,7 +63,7 @@ nav {
       }
     }
     .user {
-      font-size: 12px;
+      font-size: 15px;
       border-top: 1px solid #EAEAEA;
       padding: 15px;
       margin: 0;
